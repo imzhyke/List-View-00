@@ -1,43 +1,44 @@
 import React, { useState } from 'react'
-import { StyleSheet, Text, View, Image, TouchableOpacity, FlatList, Alert } from 'react-native'
+import { Header, StyleSheet, Text, View, Image, TouchableOpacity, FlatList, Alert } from 'react-native'
 
 export default OptionList = () => {
+
   const data = [
     {
       id: 1,
       name: 'Black Coffee',
-      image: 'https://img.icons8.com/clouds/100/000000/groups.png',
-      count: 124.711,
+      image: 'https://images.pexels.com/photos/4264049/pexels-photo-4264049.jpeg?width=500',
+      price: 124.711,
     },
     {
       id: 2,
-      name: 'Cappuccino ',
-      image: 'https://img.icons8.com/color/100/000000/real-estate.png',
-      count: 234.722,
+      name: 'Cappuccino Coffee',
+      image: 'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?width=500',
+      price: 234.722,
     },
     {
       id: 3,
-      name: 'Americano',
-      image: 'https://img.icons8.com/color/100/000000/find-matching-job.png',
-      count: 324.723,
+      name: 'Americano Coffee',
+      image: 'https://images.pexels.com/photos/8340102/pexels-photo-8340102.jpeg?width=500',
+      price: 324.723,
     },
     {
       id: 4,
-      name: 'Espresso',
-      image: 'https://img.icons8.com/clouds/100/000000/employee-card.png',
-      count: 154.573,
+      name: 'Espresso Coffee',
+      image: 'https://images.pexels.com/photos/2299028/pexels-photo-2299028.jpeg?',
+      price: 154.573,
     },
     {
       id: 5,
-      name: 'Doppio',
-      image: 'https://img.icons8.com/color/100/000000/land-sales.png',
-      count: 124.678,
+      name: 'Doppio Coffee',
+      image: 'https://images.pexels.com/photos/16392282/pexels-photo-16392282.jpeg?',
+      price: 124.678,
     },
     {
         id: 6,
-        name: 'Latte',
-        image: 'https://img.icons8.com/color/100/000000/land-sales.png',
-        count: 124.678,
+        name: 'Latte Coffee',
+        image: 'https://images.pexels.com/photos/3879495/pexels-photo-3879495.jpeg?',
+        price: 124.678,
       },
   ]
 
@@ -49,6 +50,11 @@ export default OptionList = () => {
 
   return (
     <View style={styles.container}>
+          <View style= {{alignItems : 'center'}}>
+            <Text>AAAAA</Text>
+            <Text>cofaa</Text>
+          </View>
+
       <FlatList
         style={styles.contentList}
         columnWrapperStyle={styles.listContainer}
@@ -62,7 +68,7 @@ export default OptionList = () => {
               <Image style={styles.image} source={{ uri: item.image }} />
               <View style={styles.cardContent}>
                 <Text style={styles.name}>{item.name}</Text>
-                <Text style={styles.count}>P {item.count}</Text>
+                <Text style={styles.count}>P {item.price}</Text>
                 <TouchableOpacity
                   style={styles.followButton}
                   onPress={() => clickEventListener(item)}>
@@ -84,7 +90,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#ebf0f7',
   },
   contentList: {
-    flex: 1,
+    marginBottom: 22,
   },
   cardContent: {
     marginLeft: 20,
@@ -95,7 +101,7 @@ const styles = StyleSheet.create({
     height: 90,
     borderRadius: 45,
     borderWidth: 2,
-    borderColor: '#ebf0f7',
+    borderColor: '#3399ff',
   },
 
   card: {
@@ -127,7 +133,7 @@ const styles = StyleSheet.create({
   count: {
     fontSize: 14,
     flex: 1,
-    alignSelf: 'center',
+  
     color: '#6666ff',
   },
   followButton: {
