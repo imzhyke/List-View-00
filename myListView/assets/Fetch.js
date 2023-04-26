@@ -2,7 +2,7 @@ import { View, Text, Flatlist, StyleSheet, Pressable} from 'react-native';
 import React,{useState, useEffect} from 'react';
 import { firebase } from '../config';
 
-const Fetch = () => {
+export const Fetch = () => {
     const [users, setUsers] = useState([]);
     const todoRef = firebase.firestore().collection('miniStore');
 
@@ -31,21 +31,22 @@ const Fetch = () => {
                             style={{height: '100%'}}
                             data= {users}
                             numColumns = {1}
-                            renderItem = {({item}) => (
+                            renderItem = {({data}) => (
                                 <Pressable style={style.container}>
                                     <View style={style.innerContainer}>
-                                        <Text style={style.prodName}>{item.productName}</Text>
-                                        <Text style={style.prodDesc}>{item.productDesc}</Text>
+                                        <Text style={style.prodName}>{renderItem.productName}</Text>
+                                        <Text style={style.prodDesc}>{renderItem.productDesc}</Text>
                                     </View>
                                 </Pressable>
                             )}
                         />
+                    
                     </View>
                 )
 }
 
 
-export default Fetch
+
 
 const style = StyleSheet.create({
     container:{

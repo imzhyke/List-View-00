@@ -1,18 +1,21 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import Fetch from './assets/Fetch';
+import OptionList from './OptionList';
 
-export default function App() {
+ function App() {
   return (
     <View style={styles.container}>
-    <Fetch/>
+      <OptionList/>
     </View>
   );
 }
-//test
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    
+ 
   },
 });
+
+export default App
