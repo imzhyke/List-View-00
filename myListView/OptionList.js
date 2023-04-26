@@ -5,37 +5,37 @@ export default OptionList = () => {
   const data = [
     {
       id: 1,
-      name: 'Comunity',
+      name: 'Black Coffee',
       image: 'https://img.icons8.com/clouds/100/000000/groups.png',
       count: 124.711,
     },
     {
       id: 2,
-      name: 'Housing',
+      name: 'Cappuccino ',
       image: 'https://img.icons8.com/color/100/000000/real-estate.png',
       count: 234.722,
     },
     {
       id: 3,
-      name: 'Jobs',
+      name: 'Americano',
       image: 'https://img.icons8.com/color/100/000000/find-matching-job.png',
       count: 324.723,
     },
     {
       id: 4,
-      name: 'Personal',
+      name: 'Espresso',
       image: 'https://img.icons8.com/clouds/100/000000/employee-card.png',
       count: 154.573,
     },
     {
       id: 5,
-      name: 'For sale',
+      name: 'Doppio',
       image: 'https://img.icons8.com/color/100/000000/land-sales.png',
       count: 124.678,
     },
     {
         id: 6,
-        name: 'For sale2',
+        name: 'Latte',
         image: 'https://img.icons8.com/color/100/000000/land-sales.png',
         count: 124.678,
       },
@@ -62,7 +62,7 @@ export default OptionList = () => {
               <Image style={styles.image} source={{ uri: item.image }} />
               <View style={styles.cardContent}>
                 <Text style={styles.name}>{item.name}</Text>
-                <Text style={styles.count}>{item.count}</Text>
+                <Text style={styles.count}>P {item.count}</Text>
                 <TouchableOpacity
                   style={styles.followButton}
                   onPress={() => clickEventListener(item)}>
